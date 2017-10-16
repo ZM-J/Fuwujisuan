@@ -100,6 +100,8 @@ https://www.zybuluo.com/mdeditor
 
 测试效果如下：
 
+**cmd**
+
 ![cmd](https://imgsa.baidu.com/forum/w%3D580/sign=6745fe75790e0cf3a0f74ef33a46f23d/e2e096a0cd11728bb007df45c3fcc3cec2fd2c94.jpg)
 
 9. `selpg.exe -s10 -e20 testfile.txt | find "6"`
