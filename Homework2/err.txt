@@ -1,2 +1,2 @@
-selpg : end_page ( 20 ) greater than total pages ( 14 ), less output than expected
-selpg : done
+selpg.exe : end_page ( 20 ) greater than total pages ( 14 ), less output than expected
+selpg.exe : done
