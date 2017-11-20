@@ -17,7 +17,7 @@
 
 2. 见代码。成功运行后命令行提示和上一要求相同。javascript代码通过获取到Go返回的JSON对象来实现DOM对应元素的替换。
 
-    ```
+    ```HTML
     <div>
         <p class="item-name">物品名：</p>
         <p class="item-price">价格：</p>
@@ -26,7 +26,7 @@
 
     被替换成
     
-    ```
+    ```HTML
     <div>
         <p class="item-name">物品名：Clearlove7</p>
         <p class="item-price">价格：4396</p>
