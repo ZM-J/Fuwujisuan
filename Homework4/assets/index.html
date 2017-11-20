@@ -1,0 +1,25 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/main.css"/>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/price.js"></script>
+  <title>ex-cloudgo-inout</title>
+</head>
+<body>
+  <img src="images/chunge.jpg" height="233" width="200"/>
+  <h1>物品价格查询！！</h1>
+    <div>
+        <p class="item-name">物品名：</p>
+        <p class="item-price">价格：</p>
+    </div>
+    <hr/>
+    <div>
+      <form action="/record" method="post">
+        <p>物品名：<input type="text" name="name"></p>
+        <p>价格：<input type="text" name="price"></p>
+        <input type="submit" value="录入">
+      </form>
+    </div>
+    <hr/>
+</body>
+</html>
