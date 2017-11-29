@@ -36,14 +36,17 @@
 
 
 ## 任务要求
+
 1. 添加数据
 
    使用curl来对服务器进行POST请求，进一步来添加数据。
 
    在PowerShell中，curl命令语法如下：
 
-   > curl [-Uri] <Uri> [-Body <Object> ] [-Certificate <X509Certificate> ] [-CertificateThumbprint <String> ] [-ContentType <String> ] [-Credential <PSCredential> ] [-DisableKeepAlive] [-Headers <IDictionary> ] [-InFile <String> ] [-MaximumRedirection <Int32> ] [-Method <WebRequestMethod> {Default | Get | Head | Post | Put | Delete | Trace | Options | Merge | Patch} ] [-OutFile <String> ] [-PassThru] [-Proxy <Uri> ] [-ProxyCredential <PSCredential> ] [-ProxyUseDefaultCredentials] [-SessionVariable <String> ] [-TimeoutSec <Int32> ] [-TransferEncoding <String> {chunked | compress | deflate | gzip | identity} ] [-UseBasicParsing] [-UseDefaultCredentials] [-UserAgent <String> ] [-WebSession <WebRequestSession> ] [ <CommonParameters>]
-
+   > curl [-Uri] <Uri> [-Body <Object> ] [-Certificate <X509Certificate> ] [-CertificateThumbprint <String> ] [-ContentType <String> ] [-Credential <PSCredential> ] [-DisableKeepAlive] 
+   > [-Headers <IDictionary> ] [-InFile <String> ] [-MaximumRedirection <Int32> ] [-Method <WebRequestMethod> {Default | Get | Head | Post | Put | Delete | Trace | Options | Merge | Patch} ]
+   > [-OutFile <String> ] [-PassThru] [-Proxy <Uri> ] [-ProxyCredential <PSCredential> ] [-ProxyUseDefaultCredentials] [-SessionVariable <String> ] [-TimeoutSec <Int32> ] [-TransferEncoding 
+   > <String> {chunked | compress | deflate | gzip | identity} ] [-UseBasicParsing] [-UseDefaultCredentials] [-UserAgent <String> ] [-WebSession <WebRequestSession> ] [ <CommonParameters>]
 
    我们在这里主要用到`-Uri`参数、`-Method`参数以及`-Body`参数。
 
@@ -197,3 +200,15 @@
 3. 数据服务测试
    
    未完待续
+
+4. 用`xorm`而不是`database/sql`来构建数据服务
+
+   见`xorm`文件夹下的代码。值得注意的是，实体entity
+
+   用浏览器进入`http://localhost:8080/service/userinfo`以及`http://localhost:8080/service/usercount`，也能看到跟之前一样的结果。
+
+5. 比较`xorm`和`database/sql`
+
+   相对于原生库，GO的`xorm`库将数据库的基本操作（增删查改）也封装成了一个`engine`对象。 这样的话，操作数据就不用编写DAO服务了，全藉由`engine`对象所提供的方法来完成就可以了。
+
+   当然，这样做也有弊端。由于`xorm`相当是对SQL的进一步封装，事实上其效率是不如SQL的。

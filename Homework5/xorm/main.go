@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/ZM-J/Fuwujisuan/Homework5/service"
+	"github.com/ZM-J/Fuwujisuan/Homework5/xorm/service"
 	flag "github.com/spf13/pflag"
 )
 

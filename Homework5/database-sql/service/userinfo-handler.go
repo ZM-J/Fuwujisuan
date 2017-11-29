@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/ZM-J/Fuwujisuan/Homework5/entities"
+	"github.com/ZM-J/Fuwujisuan/Homework5/database-sql/entities"
 
 	"github.com/unrolled/render"
 )
